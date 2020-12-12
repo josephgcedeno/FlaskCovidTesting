@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/datatable.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+
+      <script src="{{url_for('static',filename='js/script.min.js')}}"></script>
+
+
+
+</head>
+<body>
+
+
+ <div class="container" style="margin-top:5%;">
+       <div class="float-right">
+       <button type="button" onclick="window.location='http://localhost:5000/dlcsv'" name="load_data" id="load_data" class="btn btn-info" ><i class="fa fa-download"></i> Download CSV file</button>
+        <button class="btn btn-info" onclick="window.location='http://localhost:5000/dropsession'" type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+    </div>
+   <div class="table-responsive">
+
+
+    <br />
+       <table class="table table-bordered table-hover table-striped" id="example">
+
+                 <thead class="thead-dark">
+                    <tr>
+                        {% for col in data[0] %}
+                             <th scope="col">{{col}}</th>
+                        {% endfor %}
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for row in data[1:] %}
+                    <tr>
+                      <th >{{row[0]}}</th>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                       <td>{{row[4]}}</td>
+                    </tr>
+                     {% endfor %}
+
+                  </tbody>
+       </table>
+
+
+   </div>
+  </div>
+
+</body>
+</html>
+<script>
+
+    window.addEventListener("load", function()
+    {
+        var peste = new datatable('#example');
+        peste.sortableColumn([true,true,true,true,true]);
+    });
+</script>

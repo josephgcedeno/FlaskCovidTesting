@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Covid Testing Center</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Medizin Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <!-- Bootstrap-Core-CSS -->
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slider.css')}}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{{url_for('static',filename='css/font-awesome.css')}}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body >
+
+        <!-- mian-content -->
+        <div class="main-w3layouts-header-sec">
+
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="header d-lg-flex justify-content-between align-items-center">
+                        <div class="header-section">
+                            <h1>
+                                <a class="navbar-brand logo editContent" href="/">
+                                    <span class="fa fa-meetup"></span>Covid 19 Center
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="nav_section">
+                            <nav>
+                                <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li><a href="/">Home</a></li>
+                                    <li class="active"><a href="/covid-testing">Covid Testing </a></li>
+                                    <li><a href="/login">Login </a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
+            <!-- banner -->
+            <section class="banner_w3pvt">
+
+
+<!--style="margin-bottom: 10%"-->
+
+                            <div class="banner-top" >
+                                <center class="overlay">
+                                        <div class="container">
+                                        <div class="banner-info" >
+                                            <div class="banner-w3layouts-inner" style="margin-top:-15%; width:70%">
+                                                <h>Let us examine <span>your </span> condition.</h>
+                                                <h4>We will help to test your current condition.</h4>
+                                                <form action="/covid-testing" method="POST" >
+                                                    <div class="form-row">
+
+                                                        <div class="form-group col-md-6">
+                                                               <label for="fullname1">Full name</label>
+                                                               <input type="text" class="form-control"  id="fullname1" name="fname" placeholder="Fullname" required>
+                                                        </div>
+
+                                                          <div class="form-group col-md-6">
+                                                               <label for="email">Email Address</label>
+                                                               <input type="email" class="form-control" id="email"  name="email" placeholder="Enter email" required>
+                                                        </div>
+
+                                                    </div>
+                                                     <div class="form-row">
+
+                                                        <div class="form-group col-md-6">
+                                                               <label for="Address">Address</label>
+                                                               <input type="text" class="form-control"  id="Address" name="Address" placeholder="Address" required>
+                                                        </div>
+
+                                                          <div class="form-group col-md-6">
+                                                               <label for="email">Contact number:</label>
+                                                               <input type="number" class="form-control" id="Contactnumber"  name="Contactnumber" placeholder="Contact no" required>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you have a fever?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Fever" id="inlineRadio1" value="1">
+                                                              <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Fever" id="inlineRadio2" value="0" required>
+                                                              <label class="form-check-label" for="inlineRadio2">No</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you feel tiredness?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Tiredness" id="tiredness1" value="1">
+                                                              <label class="form-check-label" for="tiredness1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Tiredness" id="tiredness2" value="0" required>
+                                                              <label class="form-check-label" for="tiredness2">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                     <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you have dry cough??</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Dry-Cough" id="drycough1" value="1">
+                                                              <label class="form-check-label" for="drycough1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Dry-Cough" id="drycough2" value="0" required>
+                                                              <label class="form-check-label" for="drycough2">No</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you feel Difficulty in Breathing?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Difficulty-in-Breathing" id="dfb1" value="1">
+                                                              <label class="form-check-label" for="dfb1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Difficulty-in-Breathing" id="dfb2" value="0" required>
+                                                              <label class="form-check-label" for="dfb2">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                     <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you have Sore Throat?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Sore-Throat" id="st1" value="1">
+                                                              <label class="form-check-label" for="st1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Sore-Throat" id="st2" value="0" required>
+                                                              <label class="form-check-label" for="st2">No</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you feel Pains?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Pains" id="pain1" value="1">
+                                                              <label class="form-check-label" for="pain1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Pains" id="pain2" value="0" required>
+                                                              <label class="form-check-label" for="pain2">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                       <!-- #Fever, Tiredness, Dry-Cough, Difficulty-in-Breathing, Sore-Throat, Pains, Nasal-Congestion, Diarrhea, covid-->
+
+                                                     <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you feel Nasal-Congestion?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Nasal-Congestion" id="nc1" value="1">
+                                                              <label class="form-check-label" for="nc1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Nasal-Congestion" id="nc2" value="0" required>
+                                                              <label class="form-check-label" for="nc2">No</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="fullname">Do you have Diarrhea?</label>
+
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Diarrhea" id="d1" value="1">
+                                                              <label class="form-check-label" for="d1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                              <input class="form-check-input" type="radio" name="Diarrhea" id="d2" value="0" required>
+                                                              <label class="form-check-label" for="d2">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                     <button type="submit" class="read btn mt-3 col-md-12">Submit Symptoms</button>
+                                                </form>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+
+
+
+            </section>
+            <!-- //banner -->
+
+
+
+        </div>
+ <section class="banner-bottom py-5" >
+            <div class="container-fluid inner-sec-w3ls">
+                <div class="feature-grids row text-center">
+                    <div class="col-lg-3 gd-bottom one">
+                        <div class="bottom-gd">
+                            <span class="fa fa-wheelchair" aria-hidden="true"></span>
+                            <h3 class="mb-2">Modern Equipment</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-user-md" aria-hidden="true"></span>
+                            <h3 class="mb-2">
+                                Famous Doctors</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-life-ring" aria-hidden="true"></span>
+                            <h3 class="mb-2">Health Monitoring</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-folder-open-o" aria-hidden="true"></span>
+                            <h3 class="mb-2">Booking a Visit</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>
+
+{% if user=="no" %}
+
+<script>
+
+  Swal.fire({
+  icon: 'success',
+  title: 'Congratulations',
+  text: 'Congratulations you are not covid positive',
+
+})
+</script>
+{% elif user =="yes" %}
+
+
+<script>
+
+    Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'It looks like you are covid positive!',
+  footer: '<a href="https://covid19.gov.ph/information/directory">Please contact this to treat you well</a>'
+})
+</script>
+{% endif %}

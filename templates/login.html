@@ -1,0 +1,181 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Covid Testing Center</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Medizin Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <!-- Bootstrap-Core-CSS -->
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slider.css')}}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{{url_for('static',filename='css/font-awesome.css')}}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body >
+
+        <!-- mian-content -->
+        <div class="main-w3layouts-header-sec">
+
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="header d-lg-flex justify-content-between align-items-center">
+                        <div class="header-section">
+                            <h1>
+                                <a class="navbar-brand logo editContent" href="/">
+                                    <span class="fa fa-meetup"></span>Covid 19 Center
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="nav_section">
+                            <nav>
+                                <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li><a href="/">Home</a></li>
+                                    <li ><a href="/covid-testing">Covid Testing </a></li>
+                                    <li class="active"><a href="#">Login </a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
+            <!-- banner -->
+            <section class="banner_w3pvt" >
+
+
+<!--style="margin-bottom: 10%"-->
+
+                            <div class="banner-top" >
+                                <center class="overlay">
+                                        <div class="container">
+                                        <div class="banner-info" >
+                                            <div class="banner-w3layouts-inner" style="margin-top:-15%; width:70%">
+                                                <h>Login here <span> </span> </h>
+                                                <form action="/login" method="POST" >
+                                                    <div class="form-row">
+
+                                                        <div class="form-group col-md-12">
+                                                               <label for="email">Email Address</label>
+                                                               <input type="email" class="form-control" id="email"  name="email" placeholder="Enter email" required>
+
+                                                        </div>
+
+                                                          <div class="form-group col-md-12">
+                                                              <label for="fullname1">Password</label>
+                                                               <input type="password" class="form-control"  id="fullname1" name="password" placeholder="Password" required>
+                                                        </div>
+
+                                                    </div>
+
+
+
+                                                     <button type="submit" class="read btn mt-3 col-md-12">Login</button>
+                                                </form>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+
+
+
+            </section>
+            <!-- //banner -->
+
+
+
+        </div>
+ <section class="banner-bottom py-5">
+            <div class="container-fluid inner-sec-w3ls">
+                <div class="feature-grids row text-center">
+                    <div class="col-lg-3 gd-bottom one">
+                        <div class="bottom-gd">
+                            <span class="fa fa-wheelchair" aria-hidden="true"></span>
+                            <h3 class="mb-2">Modern Equipment</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-user-md" aria-hidden="true"></span>
+                            <h3 class="mb-2">
+                                Famous Doctors</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-life-ring" aria-hidden="true"></span>
+                            <h3 class="mb-2">Health Monitoring</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-folder-open-o" aria-hidden="true"></span>
+                            <h3 class="mb-2">Booking a Visit</h3>
+                            <p>Pellentesque sed sodales nunc. Vestibulum laoreet erat augue .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>
+
+{% if wrongs %}
+
+<script>
+
+  Swal.fire({
+  icon: 'error',
+  title: 'Error Occur',
+  text: 'Email or password must incorrect'
+
+})
+</script>
+<h1>asdas</h1>
+
+{% endif %}
