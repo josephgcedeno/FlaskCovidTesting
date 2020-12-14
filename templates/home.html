@@ -46,6 +46,14 @@
                      {% endfor %}
 
                   </tbody>
+
+                   <tfoot>
+                      <tr>
+                         {% for col in data[0] %}
+                             <th scope="col">{{col}}</th>
+                        {% endfor %}
+                      </tr>
+                  </tfoot>
        </table>
 
 
